@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/jiwon.css' %}">
+    <title>Main</title>
+</head>
+<body>
+    <h1>동네소개</h1>
+    {% for blogs in blogs %}
+    <p>제목:{{ blogs.title }}</p>
+    <p>글 내용:{{ blogs.content }}</p>
+    {% endfor %}
+</body>
+</html>
